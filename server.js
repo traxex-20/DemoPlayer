@@ -28,7 +28,7 @@ cors_proxy.createServer({
   removeHeaders: [
     //'cookie',
     //'cookie2',
-    //'origin'
+    'origin'
     // Strip Heroku-specific headers
     'x-request-start',
     'x-request-id',
@@ -36,9 +36,9 @@ cors_proxy.createServer({
     'connect-time',
     'total-route-time',
     // Other Heroku added debug headers
-    // 'x-forwarded-for',
-    // 'x-forwarded-proto',
-    // 'x-forwarded-port',
+     'x-forwarded-for',
+     'x-forwarded-proto',
+     'x-forwarded-port',
   ],
   redirectSameOrigin: true,
   httpProxyOptions: {
